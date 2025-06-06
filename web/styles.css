@@ -1,0 +1,11 @@
+.img-container {
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease; /* Suaviza la transición */
+}
+
+.card-img-top:hover {
+  transform: scale(1.1); /* Zoom al 110% */
+}
