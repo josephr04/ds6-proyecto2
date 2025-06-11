@@ -147,14 +147,15 @@ $conexion->close();
                     <input type="file" class="form-control" id="imagen" name="imagen">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                <a href="dashboard.php" class="btn btn-secondary">Cancelar</a>
-            </form>
-
-            <!-- Formulario separado para eliminar producto -->
-            <form method="POST" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.');" class="mt-3">
-                <input type="hidden" name="eliminar_producto" value="1">
-                <button type="submit" class="btn btn-danger">Eliminar Producto</button>
+                <div class="d-flex justify-content-between mt-4">
+                    <div>
+                        <a href="dashboard.php" class="btn btn-secondary">Volver al panel</a>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                    <div>
+                        <button type="submit" name="eliminar_producto" value="1" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.');">Eliminar Producto</button>
+                    </div>
+                </div>
             </form>
 
         <?php else: ?>

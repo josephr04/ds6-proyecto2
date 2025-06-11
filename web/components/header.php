@@ -24,15 +24,14 @@ $conexion->close();
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Administrar</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="../web/dashboard.php">Inicio</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Todos los productos</a></li>
                         <li><hr class="dropdown-divider"/></li>
                         <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button">Categorías</a>
+                            <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button">Ver Categorías</a>
                             <ul class="dropdown-menu">
                                 <?php foreach ($categorias as $categoria): ?>
                                     <li><a class="dropdown-item" href="categoria.php?id=<?php echo $categoria['id']; ?>">
@@ -41,7 +40,8 @@ $conexion->close();
                                 <?php endforeach; ?>
                             </ul>
                         </li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        <li><a class="dropdown-item" href="../web/editar_categoria.php">Gestionar Categorías</a></li>
+                        <li><a class="dropdown-item" href="../web/crear_producto.php">Crear Producto</a></li>
                     </ul>
                 </li>
             </ul>
