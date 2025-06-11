@@ -3,7 +3,7 @@
   <div class="card h-100">
       <!-- Product image-->
       <div class="img-container">
-          <img class="card-img-top" src="../web/assets/productos/<?php echo $imagen; ?>" alt="..." />
+          <img class="card-img-top" src="<?php echo $imagen; ?>" alt="<?php echo $nombre; ?>" />
       </div>
       <!-- Product details-->
       <div class="card-body p-4" style="border-top: 1px solid #ddd;">
@@ -24,7 +24,7 @@
       </div>
       <!-- Product actions-->
       <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver más</a></div>
+          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="../web/producto.php?id=<?php echo $id; ?>">Editar<i class="bi bi-pencil ms-2"></i></a></div>
       </div>
   </div>
 </div>
