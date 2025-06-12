@@ -32,7 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->close();
 
     $mensaje = "Producto creado exitosamente.";
-    header("Location: dashboard.php");
+    $return_url = $_POST['return_url'] ?? 'dashboard.php';
+    header("Location: " . $return_url);
     exit();
 }
 
@@ -86,6 +87,7 @@ $conexion->close();
                 <input type="file" class="form-control" id="imagen" name="imagen">
             </div>
 
+            <input type="hidden" name="return_url" value="<?php echo htmlspecialchars($_SERVER['HTTP_REFERER'] ?? 'dashboard.php'); ?>">
             <button type="submit" class="btn btn-primary">Crear Producto</button>
             <a onclick="history.back();" class="btn btn-secondary">Cancelar</a>
         </form>
