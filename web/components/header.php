@@ -41,17 +41,16 @@ $conexion->close();
                             </ul>
                         </li>
                         <li><a class="dropdown-item" href="../web/editar_categoria.php">Gestionar Categorías</a></li>
-                        <li><a class="dropdown-item" href="../web/crear_producto.php">Crear Producto</a></li>
+                        <li><a class="dropdown-item" href="../web/crear_producto.php">Agregar Producto</a></li>
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex">
+            <div class="d-flex">
                 <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
-                    Cart
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    <i class="bi bi-person-fill"></i>
+                    Administrador
                 </button>
-            </form>
+            </div>
         </div>
     </div>
 </nav>

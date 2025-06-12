@@ -87,7 +87,7 @@ $conexion->close();
             </div>
 
             <button type="submit" class="btn btn-primary">Crear Producto</button>
-            <a href="dashboard.php" class="btn btn-secondary">Cancelar</a>
+            <a onclick="history.back();" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
 

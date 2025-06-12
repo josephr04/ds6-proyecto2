@@ -83,7 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $producto && !isset($_POST['elimina
     $stmt->execute();
     $stmt->close();
 
-    header("Location: dashboard.php");
+    $return_url = $_POST['return_url'] ?? 'dashboard.php';
+    header("Location: " . $return_url);
     exit();
 }
 
@@ -149,13 +150,15 @@ $conexion->close();
 
                 <div class="d-flex justify-content-between mt-4">
                     <div>
-                        <a href="dashboard.php" class="btn btn-secondary">Volver al panel</a>
+                        <a onclick="history.back();" class="btn btn-secondary">Volver Atrás</a>
                         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                     </div>
                     <div>
                         <button type="submit" name="eliminar_producto" value="1" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.');">Eliminar Producto</button>
                     </div>
                 </div>
+
+                <input type="hidden" name="return_url" value="<?php echo htmlspecialchars($_SERVER['HTTP_REFERER'] ?? 'dashboard.php'); ?>">
             </form>
 
         <?php else: ?>
