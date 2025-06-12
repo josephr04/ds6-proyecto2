@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql = "INSERT INTO productos (nombre, descripcion, precio, img_url, categoria_id) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conexion->prepare($sql);
     $stmt->bind_param("ssdsi", $nombre, $descripcion, $precio, $imagen_nombre, $categoria_id);
-    $stmt->execute();
+    $stmt->execute(); 
     $stmt->close();
 
     $mensaje = "Producto creado exitosamente.";
