@@ -10,6 +10,7 @@ include 'functions/editar_categorias.php'
 		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<?php include 'components/header.php'; ?>
@@ -18,14 +19,14 @@ include 'functions/editar_categorias.php'
 			<h2 class="mb-4">Administrar Categorías</h2>
 
 			<?php if (isset($_GET['msg'])): ?>
-					<div class="alert alert-success"><?php echo htmlspecialchars($_GET['msg']); ?></div>
+					<div class="alert alert-success rounded-20"><?php echo htmlspecialchars($_GET['msg']); ?></div>
 			<?php endif; ?>
 
 			<!-- Formulario para agregar nueva categoría -->
 			<form method="POST" class="mb-4 d-flex gap-2" enctype="multipart/form-data">
-					<input type="text" name="nueva_categoria" class="form-control" placeholder="Nueva categoría..." required>
-					<input type="file" name="nueva_imagen" accept="image/*" class="form-control">
-					<button type="submit" class="btn btn-success">Agregar</button>
+					<input type="text" name="nueva_categoria" class="form-control rounded-16" placeholder="Nueva categoría..." required>
+					<input type="file" name="nueva_imagen" accept="image/*" class="form-control rounded-16">
+					<button type="submit" class="btn btn-success rounded-20">Agregar</button>
 			</form>
 
 			<!-- Formulario para editar/eliminar -->
@@ -44,7 +45,7 @@ include 'functions/editar_categorias.php'
 							<tr>
 								<td><?php echo $cat['id']; ?></td>
 								<td>
-									<input type="text" class="form-control" name="nombre[<?php echo $cat['id']; ?>]" value="<?php echo htmlspecialchars($cat['nombre']); ?>" required>
+									<input type="text" class="form-control rounded-16" name="nombre[<?php echo $cat['id']; ?>]" value="<?php echo htmlspecialchars($cat['nombre']); ?>" required>
 								</td>
 								<td>
 									<div class="d-flex align-items-center gap-4">
@@ -54,20 +55,20 @@ include 'functions/editar_categorias.php'
 											<span class="text-muted">Sin imagen</span>
 										<?php endif; ?>
 
-										<input type="file" name="imagen_actualizada[<?php echo $cat['id']; ?>]" accept="image/*" class="form-control form-control-sm" style="max-width: 200px;">
+										<input type="file" name="imagen_actualizada[<?php echo $cat['id']; ?>]" accept="image/*" class="form-control form-control-sm rounded-16" style="max-width: 200px;">
 									</div>
 								</td>
 								<td>
-									<a href="?eliminar=<?php echo $cat['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que quieres eliminar esta categoría?');">Eliminar</a>
+									<a href="?eliminar=<?php echo $cat['id']; ?>" class="btn btn-danger btn-sm rounded-20" onclick="return confirm('¿Seguro que quieres eliminar esta categoría?');">Eliminar</a>
 								</td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>
 				</table>
 
-				<div class="d-flex gap-2">
-					<a onclick="history.back();" class="btn btn-secondary">Volver Atrás</a>
-					<button type="submit" name="guardar_todo" class="btn btn-primary">Guardar Cambios</button>
+				<div class="d-flex gap-2 mt-4">
+					<a onclick="history.back();" class="btn btn-secondary rounded-20">Volver Atrás</a>
+					<button type="submit" name="guardar_todo" class="btn btn-primary rounded-20">Guardar Cambios</button>
 				</div>
 			</form>
 		</div>

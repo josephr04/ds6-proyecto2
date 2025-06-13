@@ -18,33 +18,33 @@ include 'functions/obtener_categorias.php';
 				<li class="nav-item"><a class="nav-link active" aria-current="page" href="../web/dashboard.php">Inicio</a></li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="../web/productos.php">Todos los productos</a></li>
+					<ul class="dropdown-menu rounded-16" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item rounded-2" href="../web/productos.php">Todos los productos</a></li>
 						<li><hr class="dropdown-divider"/></li>
 						<li class="dropdown-submenu">
 							<a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button">Ver Categorías</a>
-							<ul class="dropdown-menu">
+							<ul class="dropdown-menu rounded-16">
 								<?php foreach ($categorias as $categoria): ?>
-									<li><a class="dropdown-item" href="categoria.php?id=<?php echo $categoria['id']; ?>">
+									<li><a class="dropdown-item rounded-2" href="categoria.php?id=<?php echo $categoria['id']; ?>">
 										<?php echo htmlspecialchars($categoria['nombre']); ?>
 									</a></li>
 								<?php endforeach; ?>
 							</ul>
 						</li>
-						<li><a class="dropdown-item" href="../web/gestionar_categorias.php">Gestionar Categorías</a></li>
-						<li><a class="dropdown-item" href="../web/crear_producto.php">Agregar Producto</a></li>
+						<li><a class="dropdown-item rounded-2" href="../web/gestionar_categorias.php">Gestionar Categorías</a></li>
+						<li><a class="dropdown-item rounded-2" href="../web/crear_producto.php">Agregar Producto</a></li>
 					</ul>
 				</li>
 			</ul>
 
 			<div class="d-flex">
 				<div class="dropdown">
-					<button class="btn btn-outline-dark dropdown-toggle" type="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+					<button class="btn btn-outline-dark dropdown-toggle rounded-20" type="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
 						<i class="bi bi-person-fill"></i>
 						Administrador
 					</button>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="adminDropdown">
-						<li><a class="dropdown-item text-danger" href="../web/auth/logout.php">Cerrar Sesión  <i class="bi bi-box-arrow-right ms-2"></i></a></li>
+					<ul class="dropdown-menu dropdown-menu-end rounded-16" aria-labelledby="adminDropdown">
+						<li><a class="dropdown-item text-danger rounded-2" href="../web/auth/logout.php">Cerrar Sesión  <i class="bi bi-box-arrow-right ms-2"></i></a></li>
 					</ul>
 				</div>
 

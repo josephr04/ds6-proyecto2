@@ -1,6 +1,6 @@
 <!-- card.php -->
 <div class="col mb-5">
-  <div class="card h-100">
+  <div class="card h-100 rounded-20">
 		<!-- Product image-->
 		<div class="img-container">
 			<img class="card-img-top" src="<?php echo $imagen; ?>" alt="<?php echo $nombre; ?>" />
@@ -24,7 +24,7 @@
 		</div>
 		<!-- Product actions-->
 		<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-			<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="../web/producto.php?id=<?php echo $id; ?>">Editar<i class="bi bi-pencil ms-2"></i></a></div>
+			<div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-20" href="../web/producto.php?id=<?php echo $id; ?>">Editar<i class="bi bi-pencil ms-2"></i></a></div>
 		</div>
   </div>
 </div>

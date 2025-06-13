@@ -8,6 +8,8 @@ include 'functions/crear_prod.php';
 		<meta charset="UTF-8">
 		<title>Crear Producto</title>
 		<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<?php include 'components/header.php'; ?>
@@ -16,28 +18,28 @@ include 'functions/crear_prod.php';
 			<h2 class="mb-4">Agregar Nuevo Producto</h2>
 
 			<?php if ($mensaje): ?>
-				<div class="alert alert-success"><?php echo $mensaje; ?></div>
+				<div class="alert alert-success rounded-20"><?php echo $mensaje; ?></div>
 			<?php endif; ?>
 
 			<form method="POST" enctype="multipart/form-data">
 				<div class="mb-3">
 					<label for="nombre" class="form-label">Nombre del Producto</label>
-					<input type="text" class="form-control" id="nombre" name="nombre" required>
+					<input type="text" class="form-control rounded-16" id="nombre" name="nombre" required>
 				</div>
 
 				<div class="mb-3">
 					<label for="descripcion" class="form-label">Descripción</label>
-					<textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+					<textarea class="form-control rounded-16" id="descripcion" name="descripcion" rows="3" required></textarea>
 				</div>
 
 				<div class="mb-3">
 					<label for="precio" class="form-label">Precio</label>
-					<input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
+					<input type="number" step="0.01" class="form-control rounded-16" id="precio" name="precio" required>
 				</div>
 
 				<div class="mb-3">
 					<label for="categoria" class="form-label">Categoría</label>
-					<select class="form-select" id="categoria" name="categoria" required>
+					<select class="form-select rounded-16" id="categoria" name="categoria" required>
 						<?php foreach ($categorias as $cat): ?>
 							<option value="<?php echo $cat['id']; ?>"><?php echo htmlspecialchars($cat['nombre']); ?></option>
 						<?php endforeach; ?>
@@ -46,12 +48,12 @@ include 'functions/crear_prod.php';
 
 				<div class="mb-3">
 					<label for="imagen" class="form-label">Imagen del Producto</label>
-					<input type="file" class="form-control" id="imagen" name="imagen">
+					<input type="file" class="form-control rounded-16" id="imagen" name="imagen">
 				</div>
 
 				<input type="hidden" name="return_url" value="<?php echo htmlspecialchars($_SERVER['HTTP_REFERER'] ?? 'dashboard.php'); ?>">
-				<a onclick="history.back();" class="btn btn-secondary">Cancelar</a>
-				<button type="submit" class="btn btn-primary">Crear Producto</button>
+				<a onclick="history.back();" class="btn btn-secondary rounded-20">Cancelar</a>
+				<button type="submit" class="btn btn-primary rounded-20">Crear Producto</button>
 			</form>
 		</div>
 

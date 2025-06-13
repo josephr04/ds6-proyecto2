@@ -36,9 +36,9 @@ include 'functions/productos_categoria.php';
 		<section class="py-5">
 			<div class="container px-4 px-lg-5 mt-5">
 				<?php if ($categoria_id <= 0 || $categoria_nombre === 'Categoría inválida o no especificada'): ?>
-					<div class="alert alert-warning text-center">No se especificó una categoría válida.</div>
+					<div class="alert alert-warning text-center rounded-20">No se especificó una categoría válida.</div>
 				<?php elseif (empty($productos)): ?>
-					<div class="alert alert-info text-center my-5 py-5">No se encontraron productos en esta categoría.</div>
+					<div class="alert alert-info text-center my-5 py-5 rounded-20">No se encontraron productos en esta categoría.</div>
 				<?php else: ?>
 					<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 						<?php foreach ($productos as $producto): ?>

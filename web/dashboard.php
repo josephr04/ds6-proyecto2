@@ -51,7 +51,7 @@ include 'functions/productos_inicio.php';
 							include 'components/card.php';
 						?>
 					<?php endforeach; ?>
-					<a href="productos.php" class="btn btn-outline-dark" style="width: 200px;">
+					<a href="productos.php" class="btn btn-outline-dark rounded-20" style="width: 200px;">
 						Ver Más Productos
 					</a>
 				</div>
