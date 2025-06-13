@@ -38,10 +38,16 @@ include 'functions/obtener_categorias.php';
 			</ul>
 
 			<div class="d-flex">
-				<button class="btn btn-outline-dark" type="submit">
-					<i class="bi bi-person-fill"></i>
-					Administrador
-				</button>
+				<div class="dropdown">
+					<button class="btn btn-outline-dark dropdown-toggle" type="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="bi bi-person-fill"></i>
+						Administrador
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="adminDropdown">
+						<li><a class="dropdown-item text-danger" href="../web/auth/logout.php">Cerrar Sesión  <i class="bi bi-box-arrow-right ms-2"></i></a></li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 	</div>

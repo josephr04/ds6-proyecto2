@@ -1,5 +1,62 @@
+/* Login */
+.login-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-box {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 960px;
+  width: 100%;
+}
+
+.login-left, .login-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+.login-left {
+  background-color: #e6e6e6;
+}
+
+.login-right {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+  }
+}
+
+/* . */
+
 .img-container {
   overflow: hidden;
+}
+
+.roundedr-20 {
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
+.roundedl-20 {
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+}
+
+.rounded-16 {
+  border-radius: 16px !important;
+}
+
+.rounded-20 {
+  border-radius: 20px !important;
 }
 
 .card-img-top {
@@ -57,4 +114,30 @@
   border-left-color: #000;
   margin-top: 5px;
   margin-right: -10px;
+}
+
+/* checkbox */
+.custom-checkbox:checked {
+  background-color: #000; /* negro al marcar */
+  border-color: #000;
+}
+
+.custom-checkbox {
+  width: 1em;
+  height: 1em;
+  border-radius: 16px;
+  border: 1px solid #000;
+}
+
+/* Boton cerrar sesion */
+.dropdown-item.text-danger:focus,
+.dropdown-item.text-danger:active {
+  background-color: transparent !important;
+  color: #dc3545 !important; /* rojo */
+  box-shadow: none !important; /* quita el halo azul */
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: #dc3545 !important;
+  color: white !important;
 }

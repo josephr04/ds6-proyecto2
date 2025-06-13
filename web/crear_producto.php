@@ -50,8 +50,8 @@ include 'functions/crear_prod.php';
 				</div>
 
 				<input type="hidden" name="return_url" value="<?php echo htmlspecialchars($_SERVER['HTTP_REFERER'] ?? 'dashboard.php'); ?>">
-				<button type="submit" class="btn btn-primary">Crear Producto</button>
 				<a onclick="history.back();" class="btn btn-secondary">Cancelar</a>
+				<button type="submit" class="btn btn-primary">Crear Producto</button>
 			</form>
 		</div>
 
