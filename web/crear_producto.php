@@ -1,4 +1,13 @@
 <?php
+session_start(); // Inicia sesión para acceder a $_SESSION
+
+// Verifica si el usuario está logueado y es administrador
+if (!isset($_SESSION['rol_id']) || $_SESSION['rol_id'] != 1) {
+	// Redirigir a otra página, por ejemplo el dashboard o login
+	header('Location: ../web/dashboard.php');
+	exit; // Importante para detener la ejecución
+}
+
 include 'functions/crear_prod.php';
 ?>
 
@@ -52,8 +61,8 @@ include 'functions/crear_prod.php';
 				</div>
 
 				<input type="hidden" name="return_url" value="<?php echo htmlspecialchars($_SERVER['HTTP_REFERER'] ?? 'dashboard.php'); ?>">
-				<a onclick="history.back();" class="btn btn-secondary rounded-20">Cancelar</a>
-				<button type="submit" class="btn btn-primary rounded-20">Crear Producto</button>
+				<a onclick="history.back();" class="btn btn-secondary rounded-20 mt-2">Cancelar</a>
+				<button type="submit" class="btn btn-primary rounded-20 mt-2">Crear Producto</button>
 			</form>
 		</div>
 

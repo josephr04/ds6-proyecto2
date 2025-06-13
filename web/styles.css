@@ -155,3 +155,13 @@
   background-color: #dc3545 !important;
   color: white !important;
 }
+
+/* toggle */
+.cerrar-sesion-hover {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cerrar-sesion-hover:hover {
+  background-color: #f8d7da;
+  color: #842029;
+}

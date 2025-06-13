@@ -24,7 +24,17 @@
 		</div>
 		<!-- Product actions-->
 		<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-			<div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-20" href="../web/producto.php?id=<?php echo $id; ?>">Editar<i class="bi bi-pencil ms-2"></i></a></div>
+			<div class="text-center">
+				<a class="btn btn-outline-dark w-50 mt-auto rounded-20" href="../web/producto.php?id=<?php echo $id; ?>">
+					<?php
+						if (isset($_SESSION['rol_id']) && $_SESSION['rol_id'] == 1) {
+							echo 'Editar <i class="bi bi-pencil ms-2"></i>';
+						} else {
+							echo 'Ver <i class="bi bi-eye ms-2"></i>';
+						}
+					?>
+				</a>
+			</div>
 		</div>
   </div>
 </div>

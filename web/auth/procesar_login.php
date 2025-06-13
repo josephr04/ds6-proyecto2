@@ -29,7 +29,7 @@ if (isset($_POST['correo_institucional']) && isset($_POST['contrasena'])) {
             if ($usuario['rol_id'] == 1) {
                 header("Location: ../dashboard.php"); // página de administrador
             } elseif ($usuario['rol_id'] == 2) {
-                header("Location: ../empleado/perfil.php"); // página de usuario
+                header("Location: ../dashboard.php"); // página de usuario
             } else {
                 header("Location: ../login.php?error=Rol no reconocido.");
             }

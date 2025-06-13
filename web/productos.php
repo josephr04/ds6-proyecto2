@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'functions/mostrar_productos.php';
 ?>
 <!DOCTYPE html>

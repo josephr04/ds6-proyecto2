@@ -1,4 +1,13 @@
 <?php
+session_start(); // Inicia sesión para acceder a $_SESSION
+
+// Validar que el usuario esté logueado y sea administrador
+if (!isset($_SESSION['rol_id']) || $_SESSION['rol_id'] != 1) {
+	// Redirigir a dashboard u otra página si no es administrador
+	header('Location: ../web/dashboard.php');
+	exit;
+}
+
 include 'functions/editar_categorias.php'
 ?>
 

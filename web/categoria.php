@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'functions/productos_categoria.php';
 ?>
 <!DOCTYPE html>
