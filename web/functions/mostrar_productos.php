@@ -1,6 +1,11 @@
 <?php
 include 'utils/conexion.php';
 
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: ../login.php');
+	exit();
+}
+
 // Configuración de paginación
 $productos_por_pagina = 12;
 $pagina_actual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;

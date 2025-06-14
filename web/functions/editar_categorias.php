@@ -1,4 +1,19 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+	session_start();
+}
+
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: ../login.php');
+	exit();
+}
+
+if (!isset($_SESSION['rol_id']) || $_SESSION['rol_id'] !== 1) {
+	$_SESSION['error_message'] = "Acceso denegado. Solo administradores pueden realizar dicha función.";
+	header('Location: ../dashboard.php');
+	exit();
+}
+
 include 'utils/conexion.php';
 
 $mensaje = "";

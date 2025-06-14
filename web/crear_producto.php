@@ -1,11 +1,15 @@
 <?php
-session_start(); // Inicia sesión para acceder a $_SESSION
+if (session_status() === PHP_SESSION_NONE) {
+	session_start();
+}
 
-// Verifica si el usuario está logueado y es administrador
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: login.php');
+	exit();
+}
+
 if (!isset($_SESSION['rol_id']) || $_SESSION['rol_id'] != 1) {
-	// Redirigir a otra página, por ejemplo el dashboard o login
 	header('Location: ../web/dashboard.php');
-	exit; // Importante para detener la ejecución
 }
 
 include 'functions/crear_prod.php';
@@ -26,9 +30,12 @@ include 'functions/crear_prod.php';
 		<div class="container py-5">
 			<h2 class="mb-4">Agregar Nuevo Producto</h2>
 
-			<?php if ($mensaje): ?>
-				<div class="alert alert-success rounded-20"><?php echo $mensaje; ?></div>
-			<?php endif; ?>
+				<?php
+					if (isset($_SESSION['error_message'])) {
+						echo '<div class="container mt-3 w-50"><div class="alert alert-danger rounded-20 text-center">' . htmlspecialchars($_SESSION['error_message']) . '</div></div>';
+						unset($_SESSION['error_message']);
+					}
+				?>
 
 			<form method="POST" enctype="multipart/form-data">
 				<div class="mb-3">

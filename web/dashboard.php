@@ -2,6 +2,12 @@
 if (session_status() === PHP_SESSION_NONE) {
 	session_start();
 }
+
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: login.php');
+	exit();
+}
+
 include 'functions/productos_inicio.php';
 ?>
 <!DOCTYPE html>
@@ -37,6 +43,19 @@ include 'functions/productos_inicio.php';
 		</header>
 		<!-- Section-->
 		<section class="py-5">
+			<?php
+				if (session_status() === PHP_SESSION_NONE) {
+					session_start();
+				}
+				if (isset($_SESSION['success_message'])) {
+					echo '<div class="container mt-3 w-50"><div class="alert alert-success rounded-20 text-center">' . htmlspecialchars($_SESSION['success_message']) . '</div></div>';
+					unset($_SESSION['success_message']);
+				}
+				if (isset($_SESSION['error_message'])) {
+					echo '<div class="container mt-3 w-50"><div class="alert alert-danger rounded-20 text-center">' . htmlspecialchars($_SESSION['error_message']) . '</div></div>';
+					unset($_SESSION['error_message']);
+				}
+			?>
 			<div class="container px-4 px-lg-5 mt-5">
 				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 					<?php foreach ($productos as $producto): ?>

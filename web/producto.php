@@ -1,5 +1,13 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+	session_start();
+}
+
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: login.php');
+	exit();
+}
+
 include 'functions/editar_producto.php';
 
 $rol_id = $_SESSION['rol_id'] ?? 2; // Por defecto, rol usuario

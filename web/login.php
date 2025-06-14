@@ -7,44 +7,7 @@
   <title>Login</title>
   <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/logins/login-3/assets/css/login-3.css" />
-  <link rel="stylesheet" href="../web/styles.css" />
-  <style>
-    .login-layout {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 1rem;
-    }
-
-    .login-box {
-      display: flex;
-      background-color: white;
-      border-radius: 20px;
-      overflow: hidden;
-      max-width: 960px;
-      width: 100%;
-    }
-
-    .login-left, .login-right {
-      flex: 1;
-      padding: 2rem;
-    }
-
-    .login-left {
-      background-color: #e6e6e6;
-    }
-
-    .login-right {
-      background-color: #f9f9f9;
-    }
-
-    @media (max-width: 768px) {
-      .login-box {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-dark">
   <section class="login-layout">

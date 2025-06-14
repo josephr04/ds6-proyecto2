@@ -1,6 +1,11 @@
 <?php
 include 'utils/conexion.php';
 
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: ../login.php');
+	exit();
+}
+
 // Obtener categorías
 $categorias = [];
 $sql_categorias = "SELECT id, nombre FROM categorias"; // Ajusta según tu estructura de tabla

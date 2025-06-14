@@ -1,6 +1,11 @@
 <?php
 include 'utils/conexion.php';
 
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: ../login.php');
+	exit();
+}
+
 // Obtener el id de la categoría desde URL y validarlo
 $categoria_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 

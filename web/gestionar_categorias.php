@@ -1,9 +1,12 @@
 <?php
-session_start(); // Inicia sesión para acceder a $_SESSION
+session_start();
 
-// Validar que el usuario esté logueado y sea administrador
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: login.php');
+	exit();
+}
+
 if (!isset($_SESSION['rol_id']) || $_SESSION['rol_id'] != 1) {
-	// Redirigir a dashboard u otra página si no es administrador
 	header('Location: ../web/dashboard.php');
 	exit;
 }

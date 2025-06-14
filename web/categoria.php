@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['rol_id'])) {
+	header('Location: login.php');
+	exit();
+}
+
 include 'functions/productos_categoria.php';
 ?>
 <!DOCTYPE html>
@@ -36,6 +41,19 @@ include 'functions/productos_categoria.php';
 
 		<!-- Section de productos -->
 		<section class="py-5">
+			<?php
+				if (session_status() === PHP_SESSION_NONE) {
+					session_start();
+				}
+				if (isset($_SESSION['success_message'])) {
+					echo '<div class="container mt-3 w-50"><div class="alert alert-success rounded-20 text-center">' . htmlspecialchars($_SESSION['success_message']) . '</div></div>';
+					unset($_SESSION['success_message']);
+				}
+				if (isset($_SESSION['error_message'])) {
+					echo '<div class="container mt-3 w-50"><div class="alert alert-danger rounded-20 text-center">' . htmlspecialchars($_SESSION['error_message']) . '</div></div>';
+					unset($_SESSION['error_message']);
+				}
+			?>
 			<div class="container px-4 px-lg-5 mt-5">
 				<?php if ($categoria_id <= 0 || $categoria_nombre === 'Categoría inválida o no especificada'): ?>
 					<div class="alert alert-warning text-center rounded-20">No se especificó una categoría válida.</div>
