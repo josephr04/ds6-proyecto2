@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		// Manejar imagen si se subió
 		if (!empty($_FILES["imagen"]["name"])) {
 			$imagen_nombre = basename($_FILES["imagen"]["name"]);
-			$ruta_destino = "assets/productos/" . $imagen_nombre;
+			$ruta_destino = "./../imagenes/productos/" . $imagen_nombre;
 			move_uploaded_file($_FILES["imagen"]["tmp_name"], $ruta_destino);
 		}
 

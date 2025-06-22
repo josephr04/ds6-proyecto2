@@ -43,7 +43,7 @@ $conexion->close();
 // Definir estilo de fondo para el header
 $header_bg = '';
 if (!empty($categoria_img)) {
-	$header_bg = "style=\"background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/categorias/" . htmlspecialchars($categoria_img) . "'); background-size: cover; background-position: center;\"";
+	$header_bg = "style=\"background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./../imagenes/categorias/" . htmlspecialchars($categoria_img) . "'); background-size: cover; background-position: center;\"";
 } else {
 	$header_bg = "style=\"background-color: #343a40;\"";
 }

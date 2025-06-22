@@ -65,7 +65,7 @@ include 'functions/productos_inicio.php';
 							$id = $producto['id'];
 
 							if (!empty($producto['imagen'])) {
-								$imagen = '../web/assets/productos/' . $producto['imagen'];
+								$imagen = './../imagenes/productos/' . $producto['imagen'];
 							} else {
 								$imagen = "https://dummyimage.com/456x399/dee2e6/000000.png?text=" . urlencode($nombre);
 							}

@@ -70,7 +70,7 @@ $rol = ($rol_id == 1) ? 'admin' : 'usuario';
             <?php if (!empty($producto['imagen'])): ?>
                 <div class="mb-3">
                     <label class="form-label">Imagen actual:</label><br>
-                    <img src="assets/productos/<?php echo $producto['imagen']; ?>" alt="Imagen actual"
+                    <img src="./../imagenes/productos/<?php echo $producto['imagen']; ?>" alt="Imagen actual"
                          class="img-thumbnail rounded-16" width="200">
                     <?php if ($rol === 'admin'): ?>
                         <a href="producto.php?id=<?php echo $producto['id']; ?>&eliminar_imagen=1"

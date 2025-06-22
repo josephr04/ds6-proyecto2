@@ -17,7 +17,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_id'] !== 1) {
 include 'utils/conexion.php';
 
 $mensaje = "";
-$upload_dir = "assets/categorias/";
+$upload_dir = "./../imagenes/categorias/";
 $categorias2 = [];
 
 // Agregar nueva categoría

@@ -62,7 +62,7 @@ include 'functions/editar_categorias.php'
 								<td>
 									<div class="d-flex align-items-center gap-4">
 										<?php if (!empty($cat['img_url'])): ?>
-											<img src="assets/categorias/<?php echo htmlspecialchars($cat['img_url']); ?>" alt="Imagen categoría" width="60">
+											<img src="./../imagenes/categorias/<?php echo htmlspecialchars($cat['img_url']); ?>" alt="Imagen categoría" width="60">
 										<?php else: ?>
 											<span class="text-muted">Sin imagen</span>
 										<?php endif; ?>

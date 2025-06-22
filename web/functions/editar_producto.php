@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	// Eliminar producto completo
 	if (isset($_POST['eliminar_producto']) && $producto) {
 		if (!empty($producto['imagen'])) {
-			$ruta_imagen = "assets/productos/" . $producto['imagen'];
+			$ruta_imagen = "./../imagenes/productos/" . $producto['imagen'];
 			if (file_exists($ruta_imagen)) {
 				unlink($ruta_imagen);
 			}
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		try {
 			if (!empty($_FILES["imagen"]["name"])) {
 				$nombre_archivo = basename($_FILES["imagen"]["name"]);
-				$ruta_destino = "assets/productos/" . $nombre_archivo;
+				$ruta_destino = "./../imagenes/productos/" . $nombre_archivo;
 				move_uploaded_file($_FILES["imagen"]["tmp_name"], $ruta_destino);
 
 				$sql = "UPDATE productos SET nombre=?, descripcion=?, precio=?, img_url=?, categoria_id=? WHERE id=?";
@@ -106,7 +106,7 @@ if (isset($_GET['eliminar_imagen']) && $producto) {
 		exit();
 	}
 
-	$ruta_imagen = "assets/productos/" . $producto['imagen'];
+	$ruta_imagen = "./../imagenes/productos/" . $producto['imagen'];
 	if (file_exists($ruta_imagen)) {
 		unlink($ruta_imagen);
 	}
