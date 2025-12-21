@@ -57,7 +57,6 @@ La autenticación se realiza mediante **correo institucional y contraseña**, y 
   <img src="https://github.com/user-attachments/assets/5790c8ce-940f-450b-b5ac-c28b11a58b46" width="300" />
   <img src="https://github.com/user-attachments/assets/6d4f446c-edd6-4d81-90e7-81eef8c4edd5" width="300" />
 </p>
-/>
 
 
 
