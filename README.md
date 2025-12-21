@@ -44,3 +44,21 @@ La autenticación se realiza mediante **correo institucional y contraseña**, y 
 - Gestión de categorías
 - Catálogo de productos
 - Control de acceso por roles
+
+## Pantallas
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ca17ea94-8d93-4cc5-bc06-e757d8a7869f" width="600" />
+  <img src="https://github.com/user-attachments/assets/f20ed5cf-f9ef-4445-9e3d-e232ac99a52f" width="600" />
+  <img src="https://github.com/user-attachments/assets/4b85781a-61be-4e66-90a9-668740bbb048" width="600" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5790c8ce-940f-450b-b5ac-c28b11a58b46" width="300" />
+  <img src="https://github.com/user-attachments/assets/6d4f446c-edd6-4d81-90e7-81eef8c4edd5" width="300" />
+</p>
+/>
+
+
+
+
