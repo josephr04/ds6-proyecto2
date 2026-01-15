@@ -5,11 +5,11 @@ TecnoMarket. Incluye autenticación de usuarios, gestión de productos y
 categorías, y catálogos de productos. 
 
 ## Herramientas y Tecnologías Usadas
-- **Android Studio**: Entorno de desarrollo
-- **Kotlin**: Lenguaje de programación principal
-- **phpMyAdmin**: Gestión de base de datos local
-- **XML**: Diseño de la interfaz de usuario
-- **Bootstrap**: Framework para interfaces responsivas y modernas
+- **Android Studio**: Entorno de desarrollo.
+- **Kotlin**: Lenguaje de programación principal.
+- **phpMyAdmin**: Gestión de base de datos local.
+- **XML**: Diseño de la interfaz de usuario.
+- **Bootstrap**: Framework para interfaces responsivas y modernas.
 
 ## Arquitectura de la Aplicación
 La aplicación sigue el patrón de diseño **MVC (Modelo–Vista–Controlador)**:
