@@ -27,10 +27,10 @@ La aplicación sigue el patrón de diseño **MVC (Modelo–Vista–Controlador)*
 La aplicación cuenta con un sistema de autenticación y control de acceso basado en roles:
 
 ### Administrador
-- Ver productos y categorías  
-- Agregar nuevos productos y categorías  
-- Editar productos y categorías  
-- Eliminar productos y categorías  
+- Ver productos y categorías.
+- Agregar nuevos productos y categorías.  
+- Editar productos y categorías.  
+- Eliminar productos y categorías.  
 
 ### Empleado
 - Visualizar productos  
