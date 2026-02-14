@@ -1,6 +1,6 @@
 # TecnoMarket
 
-Esta es una aplicación full-stack web-móvil que permite administrar los productos de una tienda ficticia llamada 
+Esta es una aplicación fullstack web-móvil que permite administrar los productos de una tienda ficticia llamada 
 TecnoMarket. Incluye autenticación de usuarios, gestión de productos y 
 categorías, y catálogos de productos. 
 
